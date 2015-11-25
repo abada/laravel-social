@@ -34,3 +34,5 @@ Route::group(['middleware' => 'auth:all'], function()
     $a = 'authenticated.';
     Route::get('/logout', ['as' => $a . 'logout', 'uses' => 'Auth\AuthController@getLogout']);
 });
+
+Route::get('/sendmail', 'MailController@SendMail');
